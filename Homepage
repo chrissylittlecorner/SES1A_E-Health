@@ -1,1 +1,25 @@
-//Home
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>E-Health Home</title>
+
+  </head>
+  
+  <body>
+    <header class="header">
+      <nav class="menu" style="float:right">
+          <a href="index.html">Home</a>
+          <a href="past.html">About</a>
+          <a href="future.html">Login</a>
+      </nav>
+      <h1 class="mainTitle" id="Top">E-Health</h1>
+    </header>
+    
+    <main>
+      <h2 style="text-align:center">Stay Safe & Healthy 24/7 <br> BOOK AN APPOINTMENT NOW</h2>
+    </main>
+
+
+  </body>
+
+</html>
