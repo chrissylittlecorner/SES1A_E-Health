@@ -19,6 +19,12 @@
       <h2 style="text-align:center">Stay Safe & Healthy 24/7 <br> BOOK AN APPOINTMENT NOW</h2>
     </main>
 
+    <footer class=footer>
+      <span class = "floatingLeft">Contact Info:</span>
+      <a href = "#Top"> ↑Back to Top↑</a>
+      
+    </footer>
+
 
   </body>
 
