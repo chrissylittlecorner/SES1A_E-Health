@@ -8,15 +8,24 @@
   <body>
     <header class="header">
       <nav class="menu" style="float:right">
-          <a href="index.html">Home</a>
-          <a href="past.html">About</a>
-          <a href="future.html">Login</a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="patientlogin.html">Login</a>
+          </li>
+        </ul>
       </nav>
       <h1 class="mainTitle" id="Top">E-Health</h1>
     </header>
     
     <main>
       <h2 style="text-align:center">Stay Safe & Healthy 24/7 <br> BOOK AN APPOINTMENT NOW</h2>
+      
     </main>
 
     <footer class=footer>
