@@ -40,16 +40,25 @@
     </div>
   </nav>
 
-    <h1>Patient Login</h1>
-    <form class="" action="patientlogin.html" method="post">
-      <label>Email Address</label> <br>
-      <input type="email" name="" value=""> <br>
-      <label>Password</label> <br>
-      <input type="password" name="" value=""> <br>
-      <input type="submit"> <br>
-      <a href="patientregistration.html">Dont have an account? Register here</a>
-
-    </form>
+      <!-- login form -->
+  <div class="login-content">
+    <div class="img">
+      <img src="css/patientlogin.svg">
+    </div>
+  <div class="login-form">
+  <h1>Patient Login</h1>
+  <form action="includes/login.inc.php" method="post">
+    <input type="email" placeholder="Email" name="emailid"> <br>
+    <input type="password" placeholder="Password" name="passwordid" value=""> <br>
+    <div class="submit-btn">
+      <button type="submit" name="login-submit" class="btn btn-outline-light">Sign In</button>
+    </div>
+    <div class="a">
+    <a href="patientregistration.html" style="color:white;">Dont have an account? Register here</a>
+    </div>
+  </form>
+  </div>
+  </div>
   </body>
 
   </html>
