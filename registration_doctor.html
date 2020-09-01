@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>registration_doctor.html</title>
+        <meta charset="utf-8">
+        </meta>
+        <title> E-health Doctor Registration</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="css/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="css/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="css/favicon-16x16.png">
+        <link rel="manifest" href="css/site.webmanifest">
+
+        <link rel="stylesheet" href="style.css">
+      </head>
+    
+      <body>
+      <!-- nagivation bar -->
+      <nav class="navbar bg-light navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+          <img src="https://www.pngkey.com/png/full/33-337638_medicine-logo-png-1-medical-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          E-HEALTH
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="patientlogin.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="registration-content">
+        
+        <div class="img">
+          <img src="">
+        </div>
+        <div class="registration-form">
+          <h1> Doctor Registration</h1>
+          <p class="paragraph"> Under Law you are required to be registered and licenced to be a professional doctor. You must prove so but submitting <br> relevant doucmentation for E-Health and analyse and assess. You also confirm that you are An Australian Citizen.</p>
+          <form action="includes/registration.inc.php>" method="post" required>
+            <input type="text" placeholder="First Name" name="" value="" required>
+            <input type="text" placeholder="Last Name" name="" value="" required> <br>
+            <textarea id="Doctor_Description" name="Doctor_Description" rows="4" cols="50">Doctor Qualifications (Please Describe) </textarea>
+            <br>
+            <form action="documentation.html">    <!-- what is this supposed to be name lol, idk what it means -->     
+                <label for="file">Upload Medical Documentation:</label>
+                <input type="file" id="myfile" name="myfile"><br><br>
+              </form>
+              
+            <form action="dob.html"> <!-- same -->
+                <label>DOB:</label>
+                <input type="date" id="doctor_DOB" name="doctor_DOB">
+            </form>
+
+            <form action="/action_page.php">
+                <label for="state">State:</label>
+                <select name="cars" id="cars">
+                  <option value="default">Select State or Territory:</option>
+                  <option value="ACT">Australian Capital Territory</option>
+                  <option value="JBT">Jervis Bay Territory</option>
+                  <option value="NSW">New South Wales</option>
+                  <option value="NT">Northern Territory</option>
+                  <option value="OAET">Other Australian External Territory</option>
+                  <option value="QLD">Queensland</option>
+                  <option value="SA">South Australia</option>
+                  <option value="TAS">Tasmania</option>
+                  <option value="VIC">Victoria</option>
+                  <option value="WA">Western Australia</option>
+                </select>
+            </form>
+
+            <div class="number">
+              <input type="text" placeholder="Registration Number" name="" value="" required>
+              <a href="#" data-tooltip="Enter an AHPRA-issued registration number">[?]</a>         
+            </div>
+
+            <input type="text" placeholder="Mobile Number" name="" value="" required>
+            <input type="email" placeholder="Email" name="" value="" required> <br>
+            <input type="password" placeholder="Password" name="" value="" required> <br>
+            <div class="submit-btn">
+              <button class="btn btn-outline-light">Sign Up</button>
+            </div>
+            <div class="a">
+              <a href="patientlogin.html" style="color:black;">Have an account already? Login here</a>
+            </div>
+          </form>
+        </div>
+      </div>
+  </body>
+
+      
+      
+</html>
