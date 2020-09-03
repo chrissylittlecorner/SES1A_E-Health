@@ -42,13 +42,13 @@
         </div>
       </nav>
       
+      
       <div class="registration-content">
-        
         <div class="img">
-          <img src="">
+          <img src="doctor_registration.svg" alt="">
         </div>
         <div class="registration-form">
-          <h1> Doctor Registration</h1>
+          <h1> Register as a Doctor on E-Health</h1>
           <p class="paragraph"> Under Law you are required to be registered and licenced to be a professional doctor. You must prove so but submitting relevant doucmentation for E-Health and analyse and assess. You also confirm that you are An Australian Citizen.</p>
           <form action="includes/registration.inc.php>" method="post" required>
             <input type="text" placeholder="First Name" name="" value="" required>
@@ -56,7 +56,14 @@
             <form action="/action_page.php">
               <select name="doctortype" id="doctortype">
                 <option value="default">Doctor Type</option>
-                <option value="ACT">Australian Capital Territory</option>
+                <option value="Allergist/Immunologist">Allergist/Immunologist</option>
+                <option value="Cardiologist">Cardiologist</option>
+                <option value="GP">General Practitioner</option>
+                <option value="Pediatrician">Pediatrician</option>
+                <option value="Pscyhiatrist">Pscyhiatrist</option>
+                <option value="Psychologist">Psychologist</option>
+                <option value="Other_Doctor">Other Doctor...</option>
+                
                 
               </select>
               <textarea id="Doctor_Description" required name="Doctor_Description" rows="4" cols="50">Doctor Qualifications (Please Describe)  </textarea>
@@ -76,47 +83,48 @@
                   <option value="JBT">Jervis Bay Territory</option>
                   <option value="NSW">New South Wales</option>
                   <option value="NT">Northern Territory</option>
-                  <option value="OAET">Other Australian External Territory</option>
                   <option value="QLD">Queensland</option>
                   <option value="SA">South Australia</option>
                   <option value="TAS">Tasmania</option>
                   <option value="VIC">Victoria</option>
                   <option value="WA">Western Australia</option>
+                  <option value="OAET">Other Australian External Territory...</option>
                 </select>
 
                 <div class="number">
-                  <input type="text" placeholder="Registration Number" name="" value="" required>
-                  <a href="#" data-tooltip="Enter an AHPRA-issued registration number">[?]</a>   
-                  <input type="text" placeholder="Mobile Number" name="" value="" required>      
+                  <input type="text" placeholder="Registration No." name="" value="" required style="width:180px;">
+                  <a href="#" data-tooltip="Enter an AHPRA-issued registration number">[?]</a> <br>  
+                  <input type="text" placeholder="Mobile No." name="" value="" required style="width:190px;">      
                 </div>
-                <input type="email" placeholder="Email" name="" value="" required> 
+                <input type="email" placeholder="Email" name="" value="" required >  <br>
                 <input type="email" placeholder="Business Address" name="" value="" required>
-                <input type="email" placeholder="ZIP Code" name="" value="" required> <br><br><br>
-                <input type="password" placeholder="Password" name="" value="" required> 
+                <input type="email" placeholder="ZIP" name="" value="" required style="width:95px;"> <br><br>
+                <input type="password" placeholder="Password" name="" value="" required> <br>
                 <input type="password" placeholder="Confirm Password" name="" value="" required>
 
               </form>
 
               <div class="checkboxes">
-                <input type="checkbox" id="check1" name="check1" value="">
+                <input type="checkbox" id="check1" name="check1" value="" style="position: relative; bottom: -17px">
                 <label for="check1"> I Confirm that I am an Australian Citizen</label>
                 
               </div>
               
-              <input type="checkbox" id="check2" name="check2" value="">
-                <label for="check1"> I Confirm that I am Doctor</label>
-                <input type="checkbox" id="check3" name="check3" value="">
+              <div class="checkboxes" style="position: relative; bottom: 20px">
+                <input type="checkbox" id="check2" name="check2" value="" style="position: relative; bottom: -17px">
+                <label for="check2"> I Confirm that I am a Doctor</label>
+              </div>
 
-              <div class="agree">
+              <div class="agree" style="position: relative; bottom: 40px">
+                <input type="checkbox" id="check3" name="check3" value="" style="position: relative; bottom: -17px">
                 <label for="check3"> I Agree to the </label> <!-- red asterisk required checkbox?? -->
                 <a href="patientlogin.html" style="color:blue;">Terms and Conditions.
               </div>
               
 
-            
-            
+
              
-            <div class="submit-btn">
+            <div class="submit-btn" style="position: relative; bottom: 20px">
               <button class="btn btn-outline-light">Sign Up</button>
             </div>
           </form>
