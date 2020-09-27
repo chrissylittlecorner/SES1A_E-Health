@@ -1,34 +1,36 @@
-<div class="row mt-5">
-    <div class="col-md-6 m-auto">
-      <div class="card card-body">
-        <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Login</h1>
-       
-        <form action="/users/login" method="POST">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="form-control"
-              placeholder="Enter Email"
-            />
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              class="form-control"
-              placeholder="Enter Password"
-            />
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Login</button>
-        </form>
-        <p class="lead mt-4">
-          No Account? <a href="/patients/register">Register</a>
-        </p>
-      </div>
-    </div>
-  </div>
+//insert navbar
+     <div class='welcome-card'>
+<p class="title">Welcome %= user.name %</p>
+<a href="/patients/logout" class="btn btn-secondary">Logout</a>
+<a href="" class="btn btn-secondary">Account</a>
+    
+</div>
+  
+<div class='notifications'>
+    <p class="lead mb-3">Notifications</p>
+    <a href="" class="btn btn-secondary">Reschedule</a>
+    <a href="" class="btn btn-secondary">Cancel</a>
+</div>
+
+<div class='p-documents'>
+        <h1 class="lead mb-3">Health Care Card</h1>
+        <a>Full Name</a>
+        <a>Expiry date:</a>
+        <p>Documents</p>
+</div>
+
+<div class='prescriptions'>
+  <h1 class= 'prescrip'> Prescriptions</h1>
+    <p class="lead mb-3">Current Precriptions</p>
+    <p>Medicine Name:</p>
+    <p>Dosage:</p>
+    <p> Send a message to your doctor if you have any questions</p>
+    <a href="" class="btn btn-secondary">Send Message</a>
+</div>
+
+<div class='book-appointment'>
+  <h1 class= 'book-app'> Book</h1>
+    <p class="lead mb-3"></p>
+    <p>Book your next appointment now!</p>
+    <a href="" class="btn btn-secondary">Book Appointment</a>
+</div>
