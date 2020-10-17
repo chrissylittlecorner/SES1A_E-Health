@@ -1,0 +1,46 @@
+fieldset {
+    color: #555;
+    font-family: sans-serif;
+    border: none;
+    position: relative;
+  }
+  
+  fieldset > * {
+    display: block;
+  }
+  
+
+  
+  label {
+    font-size: 14px;
+    margin-bottom: 13px;
+  }
+  
+  input#medicare-input {
+    position: relative;
+    font-size: 20px;
+    z-index: 2;
+    border: none;
+    background: transparent;
+    width: 600px;
+    text-indent: 9px;
+    letter-spacing: 45px;
+    font-family: Courier;
+  }
+  
+  input#medicare-input:focus {
+    outline: none;
+  }
+  
+  span.hint {
+    margin-top: 0px;
+    font-size: 12px;
+    font-style: italic;
+  }
+  
+  span.hint::before {
+    content: "* ";
+  }
+
+
+  
