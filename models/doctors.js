@@ -1,35 +1,35 @@
 const mongoose = require('mongoose');
 
 const DoctorSchema = new mongoose.Schema({
-  name: {
+  dname: {
     type: String,
     required: true
   },
-  qualification: {
+  dqualification: {
     type: String,
     required: true
   },
-  location: {
+  dlocation: {
     type: String,
     required: true
   },
-  practice:{
+  dpractice:{
     type: String, 
     required : true
   },
-  email: {
+  demail: {
     type: String,
     required: true
   },
-  mobileno:{
+  dmobileno:{
     type: String, 
     required: true
   },
-  password: {
+  dpassword: {
     type: String,
     required: true
   },
-  date: {
+  ddate: {
     type: Date,
     default: Date.now
   }

@@ -1,5 +1,56 @@
-<h1 class="mt-4">Dashboard</h1>
-<p class="lead mb-3">Welcome User</p>
+
+<nav class="navbar bg-light navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">
+    <img src="https://www.pngkey.com/png/full/33-337638_medicine-logo-png-1-medical-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    E-HEALTH
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<a href="/patients/allappointment" class="btn btn-secondary">My Bookings</a>
+
+<h2>Search Doctors</h2>
+<form action="/patients/dashboard" method="GET">
+  <div>
+    <label>Name</label>
+    <input type="text" name="dname" value="<%= searchOptions.dname %>">
+  </div>
+  <div>
+    <label>Location</label>
+    <input type="text" name="dlocation" value="<%= searchOptions.dlocation %>">
+  </div>
+    <button type="submit"> Search </button>
+</form>
+
+<!-- for each loop that refers to the doctor display -->
+<ul class="doctors">
+  <% for(var i=0; i<doctors.length; i++) {%>
+    <li class="doctors">
+      <span><%= " Nome: " +doctors[i].dname+""%></span> <br>
+      <span><%=" Qualification: " + doctors[i].dqualification%></span><br> 
+      <span><%="Location : " + doctors[i].dlocation%></span><br>
+      <span><%="Practice : " + doctors[i].dpractice%></span><br>
+    </li>
+    <a href="/patients/newappointment" class="btn btn-secondary">Make an Appointment</a>
+  <% } %>
+</ul>
+
+
+
 <a href="/patients/logout" class="btn btn-secondary">Logout</a>
-<!-- functional search bar - nodejs, css -->
-<!-- for each loop for displaying doctor's data  -->
+<!-- functional search bar - nodejs, css (search bar not working) -->
