@@ -1,32 +1,29 @@
 const mongoose = require('mongoose');
 
 const AppointmentSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  mdcno: {
-    type: String,
-    required: true
-  },
-  mobileno: {
-    type: String,
-    required: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
-  password: {
-    type: String,
-    required: true
+  doctor: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: false,
+    ref: 'Doctors'
   },
   date: {
     type: Date,
-    default: Date.now
+    required: true
+  },
+  time: {
+    type: String,
+    required: true
+  },
+  reason: {
+    type: String,
+    required: true
+  },
+  emergency: {
+    type: Boolean,
+    required: true
   }
 });
 
-const Patient = mongoose.model('Patient', UserSchema);
+const Appointment = mongoose.model('Appointment', AppointmentSchema);
 
-module.exports = Patient;
+module.exports = Appointment;

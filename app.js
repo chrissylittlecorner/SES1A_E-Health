@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+const methodOverride = require('method-override');
 
 const app = express();
 
@@ -20,7 +21,7 @@ app.use(expressLayouts);
 app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({extended: false}));
-
+app.use(methodOverride('_method'));
 app.use(
   session({
     secret: 'secret',
@@ -43,7 +44,8 @@ app.use(function(req, res, next) {
 
 app.use('/', require('./routes/index'));
 app.use('/patients', require('./routes/patients'));
-app.use('/doctors', require('./routes/doctors'))
+app.use('/doctors', require('./routes/doctors'));
+
 
 
 const PORT = process.env.PORT || 1000;
