@@ -91,57 +91,18 @@
       <div id="page-wrapper">
           <div class="container-fluid">
 
-<style> 
-  input[type=text] {
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-  }
-  
-  input[type=text]:focus {
-    width: 100%;
-  }
-  </style>
-  </head>
-  <body>
 
-<h2>Search Doctors</h2>
-<form action="/patients/dashboard" method="GET">
-  <div>
-    <input type="text" name="dname" value="<%= searchOptions.dname %>" placeholder="Name">
-  </div>
-  <div>
-  
-    <input type="text" name="dlocation" value="<%= searchOptions.dlocation %>" placeholder="Location">
-  </div>
-    <button type="submit"  class="btn btn-secondary"> Search </button>
-</form>
-
-<!-- for each loop that refers to the doctor display -->
-<ul class="doctors">
-  <% for(var i=0; i<doctors.length; i++) {%>
-    <li class="doctors">
-      <span><%= " Nome: " +doctors[i].dname+""%></span> <br>
-      <span><%=" Qualification: " + doctors[i].dqualification%></span><br> 
-      <span><%="Location : " + doctors[i].dlocation%></span><br>
-      <span><%="Practice : " + doctors[i].dpractice%></span><br>
-    </li>
-    <a href="/patients/newappointment" class="btn btn-secondary">Make an Appointment</a>
-  <% } %>
-  
- 
-</ul>
-
-
-
-<a href="/patients/logout" class="btn btn-secondary">Logout</a>
-
+  <ul class ="appointment"> 
+    <% appointment.forEach(appointment => { %> 
+    <li class= "appointment"> 
+      <span> Doctor: <%= appointment.doctor %><br> 
+      <span> Date: <%= appointment.date %><br> 
+      <span>Time: <%= appointment.time %><br> 
+      <span>Reason: <%= appointment.reason %><br> 
+      <a href="<%=appointment.id%>/edit" > Edit </a>
+      <form method ="POST" action="/patients/<%=appointment.id%>?_method=DELETE">
+        <button type="submit">Delete</button>
+      </form>
+    </li> 
+      <% }) %> 
+    </ul>
