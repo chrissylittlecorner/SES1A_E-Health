@@ -91,54 +91,69 @@
       <div id="page-wrapper">
           <div class="container-fluid">
 
-<style> 
-  input[type=text] {
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-  }
-  
-  input[type=text]:focus {
-    width: 100%;
-  }
-  </style>
-  </head>
-  <body>
-
-<h2>Search Doctors</h2>
-<form action="/patients/dashboard" method="GET">
-  <div>
-    <input type="text" name="dname" value="<%= searchOptions.dname %>" placeholder="Name">
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3">
+          <i class="fas fa-user-plus"></i> New Appointment
+        </h1>
+        <%- include('./partials/errors') %>
+        <form action="/patients/newappointment" method="POST">
+          <div class="form-group">
+            <label for="doctor"> Doctor</label>
+            <input
+              type="doctor"
+              id="doctor"
+              name="doctor"
+              class="form-control"
+              placeholder="Enter Doctor"
+            
+            />
+          </div>
+          <div class="form-group">
+            <label for="date"> Date</label>
+            <input
+              type="date"
+              id="date"
+              name="date"
+              class="form-control"
+              placeholder="Enter Date"
+            
+            />
+          </div>
+          <div class="form-group">
+            <label for="time">Time</label>
+            <input
+              type="time"
+              id="time"
+              name="time"
+              class="form-control"
+              placeholder="Enter Your Time"
+              
+            />
+          </div>
+          <div class="form-group">
+            <label for="dlocation">Reason for appointment</label>
+            <input
+              type="reason "
+              id="reason"
+              name="reason"
+              class="form-control"
+              placeholder="Enter reason for your appointment"
+           
+            />
+          </div>
+          <p>Is it an emergency appointment?</p>
+          <input type="radio" id="emergency" name="emergency" value="yes">
+          <label for="yes">Yes</label><br>
+          <input type="radio" id="emergency" name="emergency" value="no">
+          <label for="no">No</label><br>
+          <button type="submit" class="btn btn-primary btn-block">
+            Make Appointment 
+          </button>
+        </form>
+        <p class="lead mt-4"><a href="/patients/allappointment">My Appointment</a></p>
+      </div>
+    </div>
   </div>
-  <div>
-  
-    <input type="text" name="dlocation" value="<%= searchOptions.dlocation %>" placeholder="Location">
-  </div>
-    <button type="submit"  class="btn btn-secondary"> Search </button>
-</form>
-
-<!-- for each loop that refers to the doctor display -->
-<ul class="doctors">
-  <% for(var i=0; i<doctors.length; i++) {%>
-    <li class="doctors">
-      <span><%= " Nome: " +doctors[i].dname+""%></span> <br>
-      <span><%=" Qualification: " + doctors[i].dqualification%></span><br> 
-      <span><%="Location : " + doctors[i].dlocation%></span><br>
-      <span><%="Practice : " + doctors[i].dpractice%></span><br>
-    </li>
-    <a href="/patients/newappointment" class="btn btn-secondary">Make an Appointment</a>
-  <% } %>
-  
  
-</ul>
-
-

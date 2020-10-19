@@ -1,3 +1,26 @@
+<nav class="navbar bg-light navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">
+    <img src="https://www.pngkey.com/png/full/33-337638_medicine-logo-png-1-medical-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    E-HEALTH
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="welcome">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/patients/register">Patients</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/doctors/doctorregister">Doctors</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <div class="row mt-5">
     <div class="col-md-6 m-auto">
       <div class="card card-body">
@@ -15,7 +38,7 @@
               name="dname"
               class="form-control"
               placeholder="Enter Name"
-              value="<%= typeof dname != 'undefined' ? dname : '' %>"
+        
             />
           </div>
           <div class="form-group">
@@ -26,7 +49,7 @@
               name="dqualification"
               class="form-control"
               placeholder="Enter Your Qualification"
-              value="<%= typeof dqualification != 'undefined' ? dqualification : '' %>"
+              
             />
           </div>
           <div class="form-group">
@@ -37,7 +60,7 @@
               name="dlocation"
               class="form-control"
               placeholder="Enter Location"
-              value="<%= typeof dlocation != 'undefined' ? dlocation : '' %>"
+              
             />
           </div>
           <div class="form-group">
@@ -48,7 +71,7 @@
               name="dpractice"
               class="form-control"
               placeholder="Enter Practice"
-              value="<%= typeof dpractice != 'undefined' ? dpractice : '' %>"
+             
             />
           </div>
           <div class="form-group">
@@ -59,7 +82,7 @@
               name="dmobileno"
               class="form-control"
               placeholder="Enter Mobile Number"
-              value="<%= typeof dmobileno != 'undefined' ? dmobileno : '' %>"
+              
             />
           </div>
           <div class="form-group">
@@ -70,7 +93,7 @@
               name="demail"
               class="form-control"
               placeholder="Enter Email"
-              value="<%= typeof demail != 'undefined' ? demail : '' %>"
+             
             />
           </div>
           <div class="form-group">
@@ -81,7 +104,7 @@
               name="dpassword"
               class="form-control"
               placeholder="Create Password"
-              value="<%= typeof dpassword != 'undefined' ? dpassword : '' %>"
+            
             />
           </div>
           <div class="form-group">
@@ -92,7 +115,7 @@
               name="dpassword2"
               class="form-control"
               placeholder="Confirm Password"
-              value="<%= typeof dpassword2 != 'undefined' ? dpassword2 : '' %>"
+
             />
           </div>
           <button type="submit" class="btn btn-primary btn-block">
